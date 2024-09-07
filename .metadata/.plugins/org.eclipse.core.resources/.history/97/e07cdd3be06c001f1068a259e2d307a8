@@ -1,0 +1,5 @@
+package com.project.books.resources;
+
+public class BooksResource {
+
+}

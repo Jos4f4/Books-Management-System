@@ -1,0 +1,5 @@
+package com.project.books.entities;
+
+public class Books {
+
+}
