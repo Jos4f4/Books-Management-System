@@ -2,7 +2,10 @@ package com.project.books.resources;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,9 +20,9 @@ import com.project.books.repositories.BooksRepository;
 public class BooksResource {
 
 		//Balaceamento de carga========
-		//private static Logger logger = LoggerFactory.getLogger(WorkerResource.class);
-		//@Autowired
-		//private Environment env;
+		private static Logger logger = LoggerFactory.getLogger(BooksResource.class);
+		@Autowired
+		private Environment env;
 		//Balaceamento de carga========
 		
 		@Autowired
@@ -37,15 +40,15 @@ public class BooksResource {
 			//Balaceamento de carga========
 			//logger.info("PORT = " + env.getProperty("local.servr.port"));
 			//Balaceamento de carga========
-			/*
+			
 			try {
 				Thread.sleep(3000L);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			*/
 			
-			//logger.info("PORT = " + env.getProperty("local.server.port"));
+			
+			logger.info("PORT = " + env.getProperty("local.server.port"));
 			
 			Books obj = repository.findById(id).get();
 			return ResponseEntity.ok(obj);
