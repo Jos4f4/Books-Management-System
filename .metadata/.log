@@ -1383,3 +1383,9 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.springframework.tooling.boot.ls 1 0 2024-09-14 00:51:40.301
 !MESSAGE Boot project ADDED: rentalDay
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-09-14 01:09:40.084
+!MESSAGE Classpath changed for project: rentalDay
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-09-14 01:09:40.322
+!MESSAGE Classpath changed for project: rentalDay

@@ -37,6 +37,15 @@ public class BooksResource {
 			//Balaceamento de carga========
 			//logger.info("PORT = " + env.getProperty("local.servr.port"));
 			//Balaceamento de carga========
+			/*
+			try {
+				Thread.sleep(3000L);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			*/
+			
+			//logger.info("PORT = " + env.getProperty("local.server.port"));
 			
 			Books obj = repository.findById(id).get();
 			return ResponseEntity.ok(obj);
