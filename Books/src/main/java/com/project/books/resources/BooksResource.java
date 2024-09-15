@@ -23,7 +23,7 @@ public class BooksResource {
 		private static Logger logger = LoggerFactory.getLogger(BooksResource.class);
 		@Autowired
 		private Environment env;
-		//Balaceamento de carga========
+		////Balaceamento de carga========
 		
 		@Autowired
 		private BooksRepository repository;
