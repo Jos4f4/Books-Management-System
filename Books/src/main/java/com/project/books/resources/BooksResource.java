@@ -53,4 +53,62 @@ public class BooksResource {
 			Books obj = repository.findById(id).get();
 			return ResponseEntity.ok(obj);
 		}
+		
+
+
+
+/*@Service
+public class BooksResource {
+		
+	private Logger logger = LoggerFactory.getLogger(BooksResource.class);
+		
+	@Autowired
+	BooksRepository repository;
+
+	public List<Books> findAll() {
+
+		logger.info("Finding all people!");
+
+		return repository.findAll();
+	}
+
+	public Books findById(Long id) {
+			
+		logger.info("Finding one person!");
+			
+		return repository.findById(id)
+			.orElseThrow();
+	}
+		
+	public Books create(Books books) {
+
+		logger.info("Creating one person!");
+			
+		return repository.save(books);
+	}
+		
+	public Books update(Books books) {
+			
+		logger.info("Updating one person!");
+			
+		var entity = repository.findById(books.getId())
+			.orElseThrow();
+
+		((Books) entity).setName(books.getName());  
+		((Books) entity).setGender(books.getGender());
+		((Books) entity).setRentalday(books.getRentalday());
+			
+		return repository.save(books);
+	}
+		
+	public void delete(Long id) {
+			
+		logger.info("Deleting one person!");
+			
+		var entity = repository.findById(id)
+				.orElseThrow();
+		repository.delete(entity);
+	}*/
 }
+
+
